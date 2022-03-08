@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/slide-bar/slide-bar.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1646738992921,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646739003867,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n     <my-icon class=\"icon-paihang2\" color=\"text-warning\" size=\"30\" style=\"padding:10px;\"></my-icon>\r\n     <span style=\"color:rgb(237, 186, 168);background:#353a5d;height:100%;width:100%;display:flex;font-size: 1.5rem;\"\r\n           class=\"size-1 left-fonts justify-content-center align-items-center \">Welcome to here</span>\r\n   </div>\r\n-  \r\n+\r\n </template>\r\n \r\n <script>\r\n export default {\r\n"
+                }
+            ],
+            "date": 1646738992921,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div class=\"justify-content-center align-content-center d-flex flex-column\" style=\"height:100%\">\r\n    <my-icon class=\"icon-paihang2\" color=\"text-warning\" size=\"30\" style=\"padding:10px;\"></my-icon>\r\n    <span style=\"color:rgb(237, 186, 168);background:#353a5d;height:100%;width:100%;display:flex;font-size: 1.5rem;\"\r\n          class=\"size-1 left-fonts justify-content-center align-items-center \">Welcome to here</span>\r\n  </div>\r\n  \r\n</template>\r\n\r\n<script>\r\nexport default {\r\n  name: \"slide-bar\"\r\n}\r\n</script>\r\n\r\n<style scoped>\r\n\r\n</style>"
+        }
+    ]
+}

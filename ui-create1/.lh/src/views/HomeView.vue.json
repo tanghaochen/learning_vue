@@ -3,11 +3,35 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 6,
             "patches": [
                 {
                     "date": 1646735261342,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646738409065,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,9 @@\n           <div style=\"font-size:3rem\">I'M <span style=\"color: #02eefa;\">Mark</span></div>\n           <div>您已被点赞300次</div>\n         </div>\n         <div class=\"flex-fill d-flex flex-column pb-5\">\n+        \n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n             <card-index></card-index>\n           </div>\n"
+                },
+                {
+                    "date": 1646738416021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n           <div style=\"font-size:3rem\">I'M <span style=\"color: #02eefa;\">Mark</span></div>\n           <div>您已被点赞300次</div>\n         </div>\n         <div class=\"flex-fill d-flex flex-column pb-5\">\n-        \n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n             <card-index></card-index>\n           </div>\n"
+                },
+                {
+                    "date": 1646738431015,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n         <div class=\"text-center text-white my-4\">\n           <div style=\"font-size:3rem\">I'M <span style=\"color: #02eefa;\">Mark</span></div>\n           <div>您已被点赞300次</div>\n         </div>\n-        <div class=\"flex-fill d-flex flex-column pb-5\">\n+        <div class=\"flex-fill d-flex flex-column pb-5 \">\n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n             <card-index></card-index>\n           </div>\n"
+                },
+                {
+                    "date": 1646739385722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,14 +3,14 @@\n     <div id=\"home\" class=\"rounded-3\">\n       <!--left-->\n       <slide-bar />\n       <!--      center-->\n-      <div style=\"display: flex;flex: 1\" class=\"p-1 d-flex align-content-center justify-content-center flex-column\">\n+      <div style=\"display: flex;flex: 1\" class=\"p-1 d-flex align-content-center justify-content-center flex-column \">\n         <div class=\"text-center text-white my-4\">\n           <div style=\"font-size:3rem\">I'M <span style=\"color: #02eefa;\">Mark</span></div>\n           <div>您已被点赞300次</div>\n         </div>\n-        <div class=\"flex-fill d-flex flex-column pb-5 \">\n+        <div class=\"flex-fill d-flex flex-column pb-5 py\">\n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n             <card-index></card-index>\n           </div>\n@@ -20,9 +20,9 @@\n         </div>\n       </div>\n       <!--      right-->\n       <!--        <image src=\"https://picsum.photos/id/11/10/6\" alt=\"1\" class=\"flex-fill bg-primary h-100 w-100\" style=\"width:100px;height:100px\"></image>-->\n-      <img src=\"../assets/img/wr-user.jpg\" alt=\"用户画像\" style=\"flex-grow: 0;width:30vw\" class=\"img-thumbnail\"/>\n+      <img src=\"../assets/img/wr-user.jpg\" alt=\"用户画像\" style=\"flex-grow: 0;width:30vw\" class=\"img-thumbnail px\"/>\n     </div>\n   </div>\n </template>\n \n"
+                },
+                {
+                    "date": 1646740582296,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n           <div>您已被点赞300次</div>\n         </div>\n         <div class=\"flex-fill d-flex flex-column pb-5 py\">\n           <div class=\"d-flex\" style=\"flex: 1\">\n-            <card-index>A</card-index>\n+            <card-index>Ab</card-index>\n             <card-index></card-index>\n           </div>\n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n"
+                },
+                {
+                    "date": 1646740592116,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n         </div>\n         <div class=\"flex-fill d-flex flex-column pb-5 py\">\n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index>About me</card-index>\n-            <card-index>Resu</card-index>\n+            <card-index>Resum</card-index>\n           </div>\n           <div class=\"d-flex\" style=\"flex: 1\">\n             <card-index></card-index>\n           </div>\n"
                 }
             ],
             "date": 1646735261342,
