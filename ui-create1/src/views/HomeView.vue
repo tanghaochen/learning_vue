@@ -4,6 +4,8 @@
       <!--left-->
       <slide-bar />
       <!--      center-->
+      <!-- <div class="d-flex flex-grow-1"><transition enter-active-class="animate__animated animate__zoomIn">
+      </transition></div> -->
       <div
         style="display: flex; flex: 1"
         class="p-1 d-flex align-content-center justify-content-center flex-column"
@@ -14,15 +16,7 @@
           </div>
           <div>您已被点赞300次</div>
         </div>
-        <div class="flex-fill d-flex flex-column pb-5 py">
-          <div class="d-flex" style="flex: 1">
-            <card-index size="90">About me</card-index>
-            <card-index>Resume</card-index>
-          </div>
-          <div class="d-flex" style="flex: 1">
-            <card-index>Portfolio</card-index>
-          </div>
-        </div>
+        <router-view style="z-index: 100"></router-view>
       </div>
       <!--      right-->
       <!--        <image src="https://picsum.photos/id/11/10/6" alt="1" class="flex-fill bg-primary h-100 w-100" style="width:100px;height:100px"></image>-->
@@ -37,17 +31,22 @@
 </template>
 
 <script>
-import cardIndex from "@/components/common/card-index";
+import { useRouter } from "vue-router";
 import slideBar from "@/components/slide-bar/slide-bar";
 
 export default {
   name: "Home",
   components: {
-    cardIndex,
     slideBar,
   },
   setup() {
+    let router = useRouter();
+    console.log(router.options.routes);
     return {};
+  },
+
+  aboutMe() {
+    console.log("aboutMe");
   },
 };
 </script>

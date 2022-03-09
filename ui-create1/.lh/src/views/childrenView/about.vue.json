@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/views/childrenView/about.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1646746330395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646746360493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-vue\n\\ No newline at end of file\n+<template lang=\"\">\r\n+    <div>\r\n+        \r\n+    </div>\r\n+</template>\r\n+<script>\r\n+export default {\r\n+    \r\n+}\r\n+</script>\r\n+<style lang=\"\">\r\n+    \r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646746463205,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        \r\n+        about\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646752327799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        about\r\n+        \r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646752333190,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        \r\n+        <span cl>about</span>\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646752340053,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        <span cl>about</span>\r\n+        <span class=\"ted\">about</span>\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646752346189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        <span class=\"ted\">about</span>\r\n+        <span class=\"text-danger\">about</span>\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646752353175,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-<template lang=\"\">\r\n+<template>\r\n     <div>\r\n         <span class=\"text-danger\">about</span>\r\n     </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1646752368600,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,26 @@\n <template>\r\n-    <div>\r\n-        <span class=\"text-danger\">about</span>\r\n-    </div>\r\n+  <h4>这展示了 flex 增长</h4>\r\n+  <h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>\r\n+  <div id=\"content\">\r\n+    <div class=\"box\" style=\"background-color:red;\">A</div>\r\n+    <div class=\"box\" style=\"background-color:lightblue;\">B</div>\r\n+    <div class=\"box\" style=\"background-color:yellow;\">C</div>\r\n+    <div class=\"box1\" style=\"background-color:brown;\">D</div>\r\n+    <div class=\"box1\" style=\"background-color:lightgreen;\">E</div>\r\n+    <div class=\"box\" style=\"background-color:brown;\">F</div>\r\n+  </div>\r\n </template>\r\n-<script>\r\n-export default {\r\n-    \r\n+<style>\r\n+\r\n+#content {\r\n+  display: flex;\r\n }\r\n-</script>\r\n-<style lang=\"\">\r\n-    \r\n+\r\n+.box {\r\n+  flex-grow: 1;\r\n+}\r\n+\r\n+.box1 {\r\n+  flex-grow: 2;\r\n+}\r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646756304465,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,13 @@\n-<template>\r\n-  <h4>这展示了 flex 增长</h4>\r\n-  <h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>\r\n-  <div id=\"content\">\r\n-    <div class=\"box\" style=\"background-color:red;\">A</div>\r\n-    <div class=\"box\" style=\"background-color:lightblue;\">B</div>\r\n-    <div class=\"box\" style=\"background-color:yellow;\">C</div>\r\n-    <div class=\"box1\" style=\"background-color:brown;\">D</div>\r\n-    <div class=\"box1\" style=\"background-color:lightgreen;\">E</div>\r\n-    <div class=\"box\" style=\"background-color:brown;\">F</div>\r\n-  </div>\r\n+<template lang=\"\">\r\n+    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\r\n+        testasdfasdfsadfsad\r\n+    </div>\r\n </template>\r\n-<style>\r\n-\r\n-#content {\r\n-  display: flex;\r\n+<script>\r\n+export default {\r\n+    \r\n }\r\n-\r\n-.box {\r\n-  flex-grow: 1;\r\n-}\r\n-\r\n-.box1 {\r\n-  flex-grow: 2;\r\n-}\r\n+</script>\r\n+<style lang=\"\">\r\n+    \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646785514054,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,11 +3,28 @@\n         testasdfasdfsadfsad\r\n     </div>\r\n </template>\r\n <script>\r\n+import cardIndex from \"@/components/common/card-index\";\r\n+import slideBar from \"@/components/slide-bar/slide-bar\";\r\n+import { useRouter } from 'vue-router'\r\n+\r\n export default {\r\n-    \r\n-}\r\n+  name: \"Home\",\r\n+  components: {\r\n+    cardIndex,\r\n+    slideBar,\r\n+  },\r\n+  setup() {\r\n+    let router = useRouter();\r\n+    console.log(router.options.routes);\r\n+    return {};\r\n+  },\r\n+\r\n+  aboutMe() {\r\n+    console.log(\"aboutMe\");\r\n+  },\r\n+};\r\n </script>\r\n <style lang=\"\">\r\n     \r\n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646785533194,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,19 @@\n <template lang=\"\">\r\n-    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\r\n-        testasdfasdfsadfsad\r\n-    </div>\r\n+  <div\r\n+    style=\"height: 100px; width: 100px; background: white\"\r\n+    class=\"d-flex flex-grow-1\"\r\n+  >\r\n+    testasdfasdfsadfsad\r\n+  </div>\r\n </template>\r\n <script>\r\n import cardIndex from \"@/components/common/card-index\";\r\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n-import { useRouter } from 'vue-router'\r\n+import { useRouter } from \"vue-router\";\r\n \r\n export default {\r\n-  name: \"Home\",\r\n+  name: \"A\",\r\n   components: {\r\n     cardIndex,\r\n     slideBar,\r\n   },\r\n@@ -24,7 +27,5 @@\n     console.log(\"aboutMe\");\r\n   },\r\n };\r\n </script>\r\n-<style lang=\"\">\r\n-    \r\n-</style>\n\\ No newline at end of file\n+<style lang=\"\"></style>\r\n"
+                }
+            ],
+            "date": 1646746330395,
+            "name": "Commit-0",
+            "content": "vue"
+        }
+    ]
+}

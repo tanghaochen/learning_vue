@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/views/AboutView.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1646752366467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646754022771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,15 +1,6 @@\n <template>\n-  <h4>这展示了 flex 增长</h4>\n-  <h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>\n-  <div id=\"content\">\n-    <div class=\"box\" style=\"background-color:red;\">A</div>\n-    <div class=\"box\" style=\"background-color:lightblue;\">B</div>\n-    <div class=\"box\" style=\"background-color:yellow;\">C</div>\n-    <div class=\"box1\" style=\"background-color:brown;\">D</div>\n-    <div class=\"box1\" style=\"background-color:lightgreen;\">E</div>\n-    <div class=\"box\" style=\"background-color:brown;\">F</div>\n-  </div>\n+  111\n </template>\n <style>\n \n #content {\n"
+                },
+                {
+                    "date": 1646756313578,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,13 @@\n-<template>\n-  111\n+<template lang=\"\">\n+    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\n+        testasdfasdfsadfsad\n+    </div>\n </template>\n-<style>\n-\n-#content {\n-  display: flex;\n+<script>\n+export default {\n+    \n }\n-\n-.box {\n-  flex-grow: 1;\n-}\n-\n-.box1 {\n-  flex-grow: 2;\n-}\n+</script>\n+<style lang=\"\">\n+    \n </style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646787825460,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <template lang=\"\">\n     <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\n-        testasdfasdfsadfsad\n+           <router-link to=\"/a/about\">Go to Home</router-link>\n+        <router-view style=\"z-index: 100\"></router-view>\n     </div>\n </template>\n <script>\n export default {\n"
+                },
+                {
+                    "date": 1646787898288,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,13 @@\n <template lang=\"\">\n-    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\n-           <router-link to=\"/a/about\">Go to Home</router-link>\n-        <router-view style=\"z-index: 100\"></router-view>\n-    </div>\n+  <div\n+    style=\"height: 100px; width: 100px; background: white\"\n+    class=\"d-flex flex-grow-1\"\n+  >\n+    <router-link to=\"//about\">Go to Home</router-link>\n+    <router-view style=\"z-index: 100\"></router-view>\n+  </div>\n </template>\n <script>\n\\ No newline at end of file\n-export default {\n-    \n-}\n+export default {};\n </script>\n-<style lang=\"\">\n-    \n-</style>\n+<style lang=\"\"></style>\n"
+                },
+                {
+                    "date": 1646787903984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,12 +2,12 @@\n   <div\n     style=\"height: 100px; width: 100px; background: white\"\n     class=\"d-flex flex-grow-1\"\n   >\n-    <router-link to=\"//about\">Go to Home</router-link>\n+    <router-link to=\"/aboutHome/about\">Go to Home</router-link>\n     <router-view style=\"z-index: 100\"></router-view>\n   </div>\n </template>\n <script>\n export default {};\n </script>\n\\ No newline at end of file\n-<style lang=\"\"></style>\n+<style lang=\"\"></style>\n"
+                },
+                {
+                    "date": 1646787912553,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,5 +9,5 @@\n </template>\n <script>\n export default {};\n </script>\n-<style lang=\"\"></style>\n\\ No newline at end of file\n+<style lang=\"\"></style>\n"
+                },
+                {
+                    "date": 1646788041909,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,11 @@\n <template lang=\"\">\n-  <div\n-    style=\"height: 100px; width: 100px; background: white\"\n-    class=\"d-flex flex-grow-1\"\n-  >\n-    <router-link to=\"/aboutHome/about\">Go to Home</router-link>\n-    <router-view style=\"z-index: 100\"></router-view>\n+ <template>\n+  <div id=\"app\">\n+    <router-view />\n   </div>\n </template>\n+</template>\n <script>\n export default {};\n </script>\n <style lang=\"\"></style>\n"
+                },
+                {
+                    "date": 1646788048225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,9 @@\n-<template lang=\"\">\n- <template>\n+<template>\n   <div id=\"app\">\n     <router-view />\n   </div>\n </template>\n-</template>\n <script>\n export default {};\n </script>\n <style lang=\"\"></style>\n"
+                }
+            ],
+            "date": 1646752366467,
+            "name": "Commit-0",
+            "content": "<template>\n  <h4>这展示了 flex 增长</h4>\n  <h5>A,B,C 和 F 具有 flex-grow:1。D 和 E 具有 flex-grow:2 .</h5>\n  <div id=\"content\">\n    <div class=\"box\" style=\"background-color:red;\">A</div>\n    <div class=\"box\" style=\"background-color:lightblue;\">B</div>\n    <div class=\"box\" style=\"background-color:yellow;\">C</div>\n    <div class=\"box1\" style=\"background-color:brown;\">D</div>\n    <div class=\"box1\" style=\"background-color:lightgreen;\">E</div>\n    <div class=\"box\" style=\"background-color:brown;\">F</div>\n  </div>\n</template>\n<style>\n\n#content {\n  display: flex;\n}\n\n.box {\n  flex-grow: 1;\n}\n\n.box1 {\n  flex-grow: 2;\n}\n</style>"
+        }
+    ]
+}

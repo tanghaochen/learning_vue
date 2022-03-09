@@ -1,0 +1,30 @@
+{
+    "sourceFile": "src/views/childrenView/portfolio.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 3,
+            "patches": [
+                {
+                    "date": 1646746423442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646746432631,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,13 @@\n-vueini\n\\ No newline at end of file\n+<template lang=\"\">\r\n+    <div>\r\n+        pro\r\n+    </div>\r\n+</template>\r\n+<script>\r\n+export default {\r\n+    \r\n+}\r\n+</script>\r\n+<style lang=\"\">\r\n+    \r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646746438187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n     <div>\r\n-        pro\r\n+        protfolio\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                },
+                {
+                    "date": 1646756312282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template lang=\"\">\r\n-    <div>\r\n-        protfolio\r\n+    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\r\n+        testasdfasdfsadfsad\r\n     </div>\r\n </template>\r\n <script>\r\n export default {\r\n"
+                }
+            ],
+            "date": 1646746423442,
+            "name": "Commit-0",
+            "content": "vueini"
+        }
+    ]
+}

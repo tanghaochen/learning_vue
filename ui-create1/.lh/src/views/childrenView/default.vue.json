@@ -1,0 +1,86 @@
+{
+    "sourceFile": "src/views/childrenView/default.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 17,
+            "patches": [
+                {
+                    "date": 1646750473080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646751115959,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,7 +20,16 @@\n     </div>\r\n   </div>\r\n </template>\r\n <script>\r\n-export default {};\r\n+export default {\r\n+      const router = useRouter();\r\n+    /**\r\n+     * 路径跳转路由函数\r\n+     * @description 根据路径跳转对应路由\r\n+     * @param {string} path 路径\r\n+     */\r\n+    const toPage = (path) => router.push(path);\r\n+    return { toPage };\r\n+};\r\n </script>\r\n <style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646751135594,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,12 @@\n     </div>\r\n   </div>\r\n </template>\r\n <script>\r\n+import { useRouter } from \"vue-router\";\r\n+\r\n export default {\r\n+  \r\n       const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n      * @description 根据路径跳转对应路由\r\n"
+                },
+                {
+                    "date": 1646751140771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,9 @@\n <script>\r\n import { useRouter } from \"vue-router\";\r\n \r\n export default {\r\n-  \r\n+  name: \"D\"\r\n       const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n      * @description 根据路径跳转对应路由\r\n"
+                },
+                {
+                    "date": 1646751164839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -23,9 +23,11 @@\n <script>\r\n import { useRouter } from \"vue-router\";\r\n \r\n export default {\r\n-  name: \"D\"\r\n+  name: \"Default\",\r\n+\r\n+  \r\n       const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n      * @description 根据路径跳转对应路由\r\n"
+                },
+                {
+                    "date": 1646751170403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,9 +25,11 @@\n \r\n export default {\r\n   name: \"Default\",\r\n \r\n-  \r\n+  setup(props) {\r\n+    \r\n+  }\r\n       const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n      * @description 根据路径跳转对应路由\r\n"
+                },
+                {
+                    "date": 1646751183448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -25,18 +25,11 @@\n \r\n export default {\r\n   name: \"Default\",\r\n \r\n-  setup(props) {\r\n+  setup() {\r\n     \r\n   }\r\n-      const router = useRouter();\r\n-    /**\r\n-     * 路径跳转路由函数\r\n-     * @description 根据路径跳转对应路由\r\n-     * @param {string} path 路径\r\n-     */\r\n-    const toPage = (path) => router.push(path);\r\n-    return { toPage };\r\n+     \r\n };\r\n </script>\r\n <style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646751190475,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,10 +26,16 @@\n export default {\r\n   name: \"Default\",\r\n \r\n   setup() {\r\n-    \r\n-  }\r\n-     \r\n+    const router = useRouter();\r\n+    /**\r\n+     * 路径跳转路由函数\r\n+     * @description 根据路径跳转对应路由\r\n+     * @param {string} path 路径\r\n+     */\r\n+    const toPage = (path) => router.push(path);\r\n+    return { toPage };\r\n+  },\r\n };\r\n </script>\r\n <style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646752136228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,25 +1,14 @@\n <template>\r\n-  <div\r\n-    style=\"display: flex; flex: 1\"\r\n-    class=\"p-1 d-flex align-content-center justify-content-center flex-column\"\r\n-  >\r\n-    <div class=\"text-center text-white my-4\">\r\n-      <div style=\"font-size: 3rem\">\r\n-        I'M <span style=\"color: #02eefa\">Mark</span>\r\n-      </div>\r\n-      <div>您已被点赞300次</div>\r\n-    </div>\r\n-    <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n+  <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n       <div class=\"d-flex\" style=\"flex: 1\">\r\n         <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n         <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n       </div>\r\n       <div class=\"d-flex\" style=\"flex: 1\">\r\n         <card-index>Portfolio</card-index>\r\n       </div>\r\n     </div>\r\n-  </div>\r\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n \r\n"
+                },
+                {
+                    "date": 1646752176112,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n <template>\r\n   <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n-      <div class=\"d-flex\" style=\"flex: 1\">\r\n-        <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n-        <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n-      </div>\r\n-      <div class=\"d-flex\" style=\"flex: 1\">\r\n-        <card-index>Portfolio</card-index>\r\n-      </div>\r\n+    <div class=\"d-flex\" style=\"flex: 1\">\r\n+      <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n+      <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n     </div>\r\n+    <div class=\"d-flex\" style=\"flex: 1\">\r\n+      <card-index>Portfolio</card-index>\r\n+    </div>\r\n+  </div>\r\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n \r\n"
+                },
+                {
+                    "date": 1646756307488,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,30 +1,13 @@\n-<template>\r\n-  <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n-    <div class=\"d-flex\" style=\"flex: 1\">\r\n-      <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n-      <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n+<template lang=\"\">\r\n+    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\r\n+        testasdfasdfsadfsad\r\n     </div>\r\n-    <div class=\"d-flex\" style=\"flex: 1\">\r\n-      <card-index>Portfolio</card-index>\r\n-    </div>\r\n-  </div>\r\n </template>\r\n <script>\r\n-import { useRouter } from \"vue-router\";\r\n-\r\n export default {\r\n-  name: \"Default\",\r\n-\r\n-  setup() {\r\n-    const router = useRouter();\r\n-    /**\r\n-     * 路径跳转路由函数\r\n-     * @description 根据路径跳转对应路由\r\n-     * @param {string} path 路径\r\n-     */\r\n-    const toPage = (path) => router.push(path);\r\n-    return { toPage };\r\n-  },\r\n-};\r\n+    \r\n+}\r\n </script>\r\n-<style lang=\"\"></style>\r\n+<style lang=\"\">\r\n+    \r\n+</style>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1646756321673,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,30 @@\n-<template lang=\"\">\r\n-    <div style=\"height: 100px;width: 100px;background:white;\" class=\"d-flex flex-grow-1\">\r\n-        testasdfasdfsadfsad\r\n+<template>\r\n+  <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n+    <div class=\"d-flex\" style=\"flex: 1\">\r\n+      <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n+      <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n     </div>\r\n+    <div class=\"d-flex\" style=\"flex: 1\">\r\n+      <card-index>Portfolio</card-index>\r\n+    </div>\r\n+  </div>\r\n\\ No newline at end of file\n </template>\r\n <script>\r\n+import { useRouter } from \"vue-router\";\r\n+\r\n export default {\r\n-    \r\n-}\r\n+  name: \"Default\",\r\n+\r\n+  setup() {\r\n+    const router = useRouter();\r\n+    /**\r\n+     * 路径跳转路由函数\r\n+     * @description 根据路径跳转对应路由\r\n+     * @param {string} path 路径\r\n+     */\r\n+    const toPage = (path) => router.push(path);\r\n+    return { toPage };\r\n+  },\r\n+};\r\n </script>\r\n-<style lang=\"\">\r\n-    \r\n-</style>\n+<style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646785551446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n <script>\r\n import { useRouter } from \"vue-router\";\r\n \r\n export default {\r\n-  name: \"Default\",\r\n+  // name: \"Default\",\r\n \r\n   setup() {\r\n     const router = useRouter();\r\n     /**\r\n@@ -26,5 +26,5 @@\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n-<style lang=\"\"></style>\n\\ No newline at end of file\n+<style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646788390952,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,9 @@\n   </div>\r\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n+import slideBar from \"@/components/slide-bar/slide-bar\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n \r\n"
+                },
+                {
+                    "date": 1646788408830,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n-\r\n+  \r\n   setup() {\r\n     const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n"
+                },
+                {
+                    "date": 1646788423386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n-  \r\n+  components: {}\r\n   setup() {\r\n     const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n"
+                },
+                {
+                    "date": 1646788429838,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n-  components: {}\r\n+  components: {\r\n+    cardIndex,\r\n+  },\r\n   setup() {\r\n     const router = useRouter();\r\n     /**\r\n      * 路径跳转路由函数\r\n"
+                },
+                {
+                    "date": 1646788453211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n+import cardIndex from \"@/components/common/card-index\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n"
+                }
+            ],
+            "date": 1646750473080,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div\r\n    style=\"display: flex; flex: 1\"\r\n    class=\"p-1 d-flex align-content-center justify-content-center flex-column\"\r\n  >\r\n    <div class=\"text-center text-white my-4\">\r\n      <div style=\"font-size: 3rem\">\r\n        I'M <span style=\"color: #02eefa\">Mark</span>\r\n      </div>\r\n      <div>您已被点赞300次</div>\r\n    </div>\r\n    <div class=\"flex-fill d-flex flex-column pb-5 py\">\r\n      <div class=\"d-flex\" style=\"flex: 1\">\r\n        <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n        <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n      </div>\r\n      <div class=\"d-flex\" style=\"flex: 1\">\r\n        <card-index>Portfolio</card-index>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n<script>\r\nexport default {};\r\n</script>\r\n<style lang=\"\"></style>\r\n"
+        }
+    ]
+}

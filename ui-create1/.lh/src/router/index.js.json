@@ -1,0 +1,190 @@
+{
+    "sourceFile": "src/router/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 43,
+            "patches": [
+                {
+                    "date": 1646748556088,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1646748564787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import HomeView from '../views/HomeView.vue'\n+import {chil}\n \n-\n const routes = [\n   {\n     path: '/',\n     name: 'home',\n"
+                },
+                {
+                    "date": 1646748569984,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import HomeView from '../views/HomeView.vue'\n-import {chil}\n+import {childrenRoute} \n \n const routes = [\n   {\n     path: '/',\n"
+                },
+                {
+                    "date": 1646748576663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import HomeView from '../views/HomeView.vue'\n-import {childrenRoute} \n+import {childrenRoute} from './childrenRoute'\n \n const routes = [\n   {\n     path: '/',\n"
+                },
+                {
+                    "date": 1646748581943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import HomeView from '../views/HomeView.vue'\n-import {childrenRoute} from './childrenRoute'\n+import {childrenRoute} from './childrenRoute.'\n \n const routes = [\n   {\n     path: '/',\n"
+                },
+                {
+                    "date": 1646749594118,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import { createRouter, createWebHistory } from 'vue-router'\n import HomeView from '../views/HomeView.vue'\n-import {childrenRoute} from './childrenRoute.'\n+import {childrenRoute} from './childrenRoute.js'\n \n const routes = [\n   {\n     path: '/',\n@@ -19,8 +19,8 @@\n ]\n \n const router = createRouter({\n   history: createWebHistory(process.env.BASE_URL),\n-  routes\n+  routes,childrenRoute\n })\n \n export default router\n"
+                },
+                {
+                    "date": 1646750399897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,26 +1,28 @@\n-import { createRouter, createWebHistory } from 'vue-router'\n-import HomeView from '../views/HomeView.vue'\n-import {childrenRoute} from './childrenRoute.js'\n+import { createRouter, createWebHistory } from \"vue-router\";\n+import HomeView from \"../views/HomeView.vue\";\n+import { childrenRoute } from \"./childrenRoute.js\";\n \n const routes = [\n   {\n-    path: '/',\n-    name: 'home',\n-    component: HomeView\n+    path: \"/\",\n+    name: \"home\",\n+    component: HomeView,\n   },\n   {\n-    path: '/about',\n-    name: 'about',\n+    path: \"/about\",\n+    name: \"about\",\n     // route level code-splitting\n     // this generates a separate chunk (about.[hash].js) for this route\n     // which is lazy-loaded when the route is visited.\n-    component: () => import(/* webpackChunkName: \"about\" */ '../views/AboutView.vue')\n-  }\n-]\n+    component: () =>\n+      import(/* webpackChunkName: \"about\" */ \"../views/AboutView.vue\"),\n+  },\n+];\n \n const router = createRouter({\n   history: createWebHistory(process.env.BASE_URL),\n-  routes,childrenRoute\n-})\n+  routes,\n+  childrenRoute,\n+});\n \n-export default router\n+export default router;\n"
+                },
+                {
+                    "date": 1646750611710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,17 +7,17 @@\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n   },\n-  {\n-    path: \"/about\",\n-    name: \"about\",\n-    // route level code-splitting\n-    // this generates a separate chunk (about.[hash].js) for this route\n-    // which is lazy-loaded when the route is visited.\n-    component: () =>\n-      import(/* webpackChunkName: \"about\" */ \"../views/AboutView.vue\"),\n-  },\n+  // {\n+  //   path: \"/about\",\n+  //   name: \"about\",\n+  //   // route level code-splitting\n+  //   // this generates a separate chunk (about.[hash].js) for this route\n+  //   // which is lazy-loaded when the route is visited.\n+  //   component: () =>\n+  //     import(/* webpackChunkName: \"about\" */ \"../views/AboutView.vue\"),\n+  // },\n ];\n \n const router = createRouter({\n   history: createWebHistory(process.env.BASE_URL),\n"
+                },
+                {
+                    "date": 1646750733076,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,7 @@\n \n const router = createRouter({\n   history: createWebHistory(process.env.BASE_URL),\n   routes,\n-  childrenRoute,\n });\n \n export default router;\n"
+                },
+                {
+                    "date": 1646750741155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n   {\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n+    childrenRoute\n   },\n   // {\n   //   path: \"/about\",\n   //   name: \"about\",\n"
+                },
+                {
+                    "date": 1646750746496,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   {\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n-    childrenRoute\n+    child\n   },\n   // {\n   //   path: \"/about\",\n   //   name: \"about\",\n"
+                },
+                {
+                    "date": 1646750751882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   {\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n-    child\n+    children:\n   },\n   // {\n   //   path: \"/about\",\n   //   name: \"about\",\n"
+                },
+                {
+                    "date": 1646750763391,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   {\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n-    children:\n+    children:childrenRoute\n   },\n   // {\n   //   path: \"/about\",\n   //   name: \"about\",\n"
+                },
+                {
+                    "date": 1646750779843,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   {\n     path: \"/\",\n     name: \"home\",\n     component: HomeView,\n-    children:childrenRoute\n+    children: childrenRoute,\n   },\n   // {\n   //   path: \"/about\",\n   //   name: \"about\",\n"
+                },
+                {
+                    "date": 1646752437233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,17 +8,17 @@\n     name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n-  // {\n-  //   path: \"/about\",\n-  //   name: \"about\",\n-  //   // route level code-splitting\n-  //   // this generates a separate chunk (about.[hash].js) for this route\n-  //   // which is lazy-loaded when the route is visited.\n-  //   component: () =>\n-  //     import(/* webpackChunkName: \"about\" */ \"../views/AboutView.vue\"),\n-  // },\n+  {\n+    path: \"/about\",\n+    name: \"about\",\n+    // route level code-splitting\n+    // this generates a separate chunk (about.[hash].js) for this route\n+    // which is lazy-loaded when the route is visited.\n+    component: () =>\n+      import(/* webpackChunkName: \"about\" */ \"../views/AboutView.vue\"),\n+  },\n ];\n \n const router = createRouter({\n   history: createWebHistory(process.env.BASE_URL),\n"
+                },
+                {
+                    "date": 1646752446393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n     component: HomeView,\n     children: childrenRoute,\n   },\n   {\n-    path: \"/about\",\n-    name: \"about\",\n+    path: \"/aboutHome\",\n+    name: \"aboutH\",\n     // route level code-splitting\n     // this generates a separate chunk (about.[hash].js) for this route\n     // which is lazy-loaded when the route is visited.\n     component: () =>\n"
+                },
+                {
+                    "date": 1646753057152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,16 +3,16 @@\n import { childrenRoute } from \"./childrenRoute.js\";\n \n const routes = [\n   {\n-    path: \"/\",\n+    path: \"\",\n     name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n   {\n     path: \"/aboutHome\",\n-    name: \"aboutH\",\n+    name: \"aboutHome\",\n     // route level code-splitting\n     // this generates a separate chunk (about.[hash].js) for this route\n     // which is lazy-loaded when the route is visited.\n     component: () =>\n"
+                },
+                {
+                    "date": 1646753347844,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n const routes = [\n   {\n     path: \"\",\n-    name: \"home\",\n+    // name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n   {\n"
+                },
+                {
+                    "date": 1646753354115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { childrenRoute } from \"./childrenRoute.js\";\n \n const routes = [\n   {\n-    path: \"\",\n+    path: \"home\",\n     // name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n"
+                },
+                {
+                    "date": 1646753375955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \n const routes = [\n   {\n     path: \"home\",\n-    // name: \"home\",\n+    name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n   {\n"
+                },
+                {
+                    "date": 1646753395726,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import { childrenRoute } from \"./childrenRoute.js\";\n \n const routes = [\n   {\n-    path: \"home\",\n+    path: \"/home\",\n     name: \"home\",\n     component: HomeView,\n     children: childrenRoute,\n   },\n"
+                },
+                {
+                    "date": 1646753601035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,29 @@\n   {\n     path: \"/home\",\n     name: \"home\",\n     component: HomeView,\n-    children: childrenRoute,\n+    children: childrenRoute = () => [\n+      {\n+        path: '/home/about',\n+        // name: \"Default\",\n+        component: () => About\n+      },\n+      {\n+        path: \"/about1\",\n+        // name: \"about\",\n+        component: () => {\n+          \"/src/views/childrenView/about.vue\";\n+        },\n+      },\n+      {\n+        path: \"/resume\",\n+        // name: \"resume\",\n+        component: () => {\n+          \"/src/views/childrenView/resume.vue\";\n+        },\n+      },\n+    ];,\n   },\n   {\n     path: \"/aboutHome\",\n     name: \"aboutHome\",\n"
+                },
+                {
+                    "date": 1646753615187,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -26,9 +26,9 @@\n         component: () => {\n           \"/src/views/childrenView/resume.vue\";\n         },\n       },\n-    ];,\n+    ]\n   },\n   {\n     path: \"/aboutHome\",\n     name: \"aboutHome\",\n"
+                },
+                {
+                    "date": 1646753626013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n+import About from \"../views/AboutView.vue\"\n \n const routes = [\n   {\n     path: \"/home\",\n"
+                },
+                {
+                    "date": 1646753633373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n   {\n     path: \"/home\",\n     name: \"home\",\n     component: HomeView,\n-    children: childrenRoute = () => [\n+    children:() => [\n       {\n         path: '/home/about',\n         // name: \"Default\",\n         component: () => About\n"
+                },
+                {
+                    "date": 1646753644696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     component: HomeView,\n     children:() => [\n       {\n         path: '/home/about',\n-        // name: \"Default\",\n+        name: \"Default\",\n         component: () => About\n       },\n       {\n         path: \"/about1\",\n"
+                },
+                {
+                    "date": 1646753703914,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n-        path: '/home/about',\n+        path: '/\\Default',\n         name: \"Default\",\n         component: () => About\n       },\n       {\n"
+                },
+                {
+                    "date": 1646753710418,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n-        path: '/\\Default',\n+        path: 'Default',\n         name: \"Default\",\n         component: () => About\n       },\n       {\n"
+                },
+                {
+                    "date": 1646753857427,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,22 +13,22 @@\n         path: 'Default',\n         name: \"Default\",\n         component: () => About\n       },\n-      {\n-        path: \"/about1\",\n-        // name: \"about\",\n-        component: () => {\n-          \"/src/views/childrenView/about.vue\";\n-        },\n-      },\n-      {\n-        path: \"/resume\",\n-        // name: \"resume\",\n-        component: () => {\n-          \"/src/views/childrenView/resume.vue\";\n-        },\n-      },\n+      // {\n+      //   path: \"/about1\",\n+      //   // name: \"about\",\n+      //   component: () => {\n+      //     \"/src/views/childrenView/about.vue\";\n+      //   },\n+      // },\n+      // {\n+      //   path: \"/resume\",\n+      //   // name: \"resume\",\n+      //   component: () => {\n+      //     \"/src/views/childrenView/resume.vue\";\n+      //   },\n+      // },\n     ]\n   },\n   {\n     path: \"/aboutHome\",\n"
+                },
+                {
+                    "date": 1646755518406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"../views/AboutView.vue\"\n+import About from \"../views/.vue\"\n \n const routes = [\n   {\n     path: \"/home\",\n"
+                },
+                {
+                    "date": 1646755529716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"../views/.vue\"\n+import About from \"../views/est.vue\"\n \n const routes = [\n   {\n     path: \"/home\",\n"
+                },
+                {
+                    "date": 1646755575033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,17 +1,17 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"../views/est.vue\"\n+import About from \"../views/Test.vue\"\n \n const routes = [\n   {\n     path: \"/home\",\n     name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n-        path: 'Default',\n+        path: '/Default',\n         name: \"Default\",\n         component: () => About\n       },\n       // {\n"
+                },
+                {
+                    "date": 1646755594000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     component: HomeView,\n     children:() => [\n       {\n         path: '/Default',\n-        name: \"Default\",\n+        name: \"default\",\n         component: () => About\n       },\n       // {\n       //   path: \"/about1\",\n"
+                },
+                {
+                    "date": 1646755678319,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n import About from \"../views/Test.vue\"\n \n const routes = [\n   {\n-    path: \"/home\",\n+    path: \"/\",\n     name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n"
+                },
+                {
+                    "date": 1646755784648,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n \n const routes = [\n   {\n     path: \"/\",\n-    name: \"home\",\n+    // name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n         path: '/Default',\n"
+                },
+                {
+                    "date": 1646755886873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     children:() => [\n       {\n         path: '/Default',\n         name: \"default\",\n-        component: () => About\n+        component: () =>   About\n       },\n       // {\n       //   path: \"/about1\",\n       //   // name: \"about\",\n"
+                },
+                {
+                    "date": 1646755975047,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"../views/Test.vue\"\n+import About from \"/views/Test.vue\"\n \n const routes = [\n   {\n     path: \"/\",\n@@ -11,9 +11,9 @@\n     children:() => [\n       {\n         path: '/Default',\n         name: \"default\",\n-        component: () =>   About\n+        component: About\n       },\n       // {\n       //   path: \"/about1\",\n       //   // name: \"about\",\n"
+                },
+                {
+                    "date": 1646755995666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"/views/Test.vue\"\n+import About from \"@/views/Test.vue\"\n \n const routes = [\n   {\n     path: \"/\",\n@@ -13,16 +13,16 @@\n         path: '/Default',\n         name: \"default\",\n         component: About\n       },\n+      {\n+        path: \"/about1\",\n+        // name: \"about\",\n+        component: () => {\n+          \"/src/views/childrenView/about.vue\";\n+        },\n+      },\n       // {\n-      //   path: \"/about1\",\n-      //   // name: \"about\",\n-      //   component: () => {\n-      //     \"/src/views/childrenView/about.vue\";\n-      //   },\n-      // },\n-      // {\n       //   path: \"/resume\",\n       //   // name: \"resume\",\n       //   component: () => {\n       //     \"/src/views/childrenView/resume.vue\";\n"
+                },
+                {
+                    "date": 1646756005311,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n     // name: \"home\",\n     component: HomeView,\n     children:() => [\n       {\n-        path: '/Default',\n+        path: '/',\n         name: \"default\",\n         component: About\n       },\n       {\n"
+                },
+                {
+                    "date": 1646756013461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n     component: HomeView,\n     children:() => [\n       {\n         path: '/',\n-        name: \"default\",\n+        name: \"About\",\n         component: About\n       },\n       {\n         path: \"/about1\",\n"
+                },
+                {
+                    "date": 1646756023716,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,19 +1,19 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"@/views/Test.vue\"\n+import About from \"@/views/Test.vue\";\n \n const routes = [\n   {\n     path: \"/\",\n     // name: \"home\",\n     component: HomeView,\n-    children:() => [\n+    children: () => [\n       {\n-        path: '/',\n+        path: \"/\",\n         name: \"About\",\n-        component: About\n+        component: About,\n       },\n       {\n         path: \"/about1\",\n         // name: \"about\",\n@@ -27,9 +27,9 @@\n       //   component: () => {\n       //     \"/src/views/childrenView/resume.vue\";\n       //   },\n       // },\n-    ]\n+    ],\n   },\n   {\n     path: \"/aboutHome\",\n     name: \"aboutHome\",\n"
+                },
+                {
+                    "date": 1646756186350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n import { createRouter, createWebHistory } from \"vue-router\";\n import HomeView from \"../views/HomeView.vue\";\n import { childrenRoute } from \"./childrenRoute.js\";\n-import About from \"@/views/Test.vue\";\n+import About from \"/views/Test.vue\";\n \n const routes = [\n   {\n     path: \"/\",\n"
+                },
+                {
+                    "date": 1646756282619,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n       {\n         path: \"/about1\",\n         // name: \"about\",\n         component: () => {\n-          \"//views/childrenView/about.vue\";\n+          \"/views/childrenView/about.vue\";\n         },\n       },\n       // {\n       //   path: \"/resume\",\n"
+                },
+                {
+                    "date": 1646786343753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n     children: () => [\n       {\n         path: \"about\",\n         // name: \"about\",\n-        component: =,\n+        component: =>,\n       },\n       {\n         path: \"about1\",\n         // name: \"about\",\n"
+                }
+            ],
+            "date": 1646748556088,
+            "name": "Commit-0",
+            "content": "import { createRouter, createWebHistory } from 'vue-router'\nimport HomeView from '../views/HomeView.vue'\n\n\nconst routes = [\n  {\n    path: '/',\n    name: 'home',\n    component: HomeView\n  },\n  {\n    path: '/about',\n    name: 'about',\n    // route level code-splitting\n    // this generates a separate chunk (about.[hash].js) for this route\n    // which is lazy-loaded when the route is visited.\n    component: () => import(/* webpackChunkName: \"about\" */ '../views/AboutView.vue')\n  }\n]\n\nconst router = createRouter({\n  history: createWebHistory(process.env.BASE_URL),\n  routes\n})\n\nexport default router\n"
+        }
+    ]
+}
