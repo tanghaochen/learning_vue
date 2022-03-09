@@ -34,7 +34,7 @@ const computedRouter = () => {
   //   const condition2 = path === "/" ? "Mark" : name;
   //   des.value = condition2;
   // });
-  // 第三种 实时计算 更加简洁 但是现在却不能打印
+  // 第三种 实时计算 更加简洁 但是不能打印出值
   /**
    * 路径链接标识对象生成函数
    * @description 生成一个标识对象

@@ -15,6 +15,8 @@
             {{ title }} <span style="color: #02eefa">{{ des }}</span>
           </div>
           <div>您已被点赞c300次</div>
+
+          <div @click="quit()">退出</div>
         </div>
         <router-view v-slot="{ Component }" class="d-flex flex-grow-1">
           <transition
@@ -40,6 +42,7 @@
 <script>
 import slideBar from "@/components/slide-bar/slide-bar";
 import { computedRouter } from "@/lib/routerLib.js";
+import router from "@/router";
 
 export default {
   name: "Home",
@@ -49,7 +52,9 @@ export default {
   setup() {
     const { des, title } = computedRouter();
 
-    return { des, title };
+    const quit = () => router.go(-1);
+
+    return { des, title, quit };
   },
 };
 </script>
