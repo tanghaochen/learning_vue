@@ -5,7 +5,7 @@
       <card-index @click="toPage('resume')">Resume</card-index>
     </div>
     <div class="d-flex" style="flex: 1">
-      <card-index>Portfolio</card-index>
+      <card-index  @click="toPage('portfolio')">Portfolio</card-index>
     </div>
   </div>
 </template>

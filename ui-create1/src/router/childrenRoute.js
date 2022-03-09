@@ -14,4 +14,9 @@ export const childrenRoute = [
     name: "Resume",
     component: () => import("../views/childrenView/resume.vue"),
   },
+  {
+    path: "/Portfolio", // 忘写了加下去
+    name: "portfolio",
+    component: () => import("../views/childrenView/portfolio.vue"),
+  },
 ];

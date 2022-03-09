@@ -1,6 +1,6 @@
 <template lang="">
     <div style="height: 100px;width: 100px;background:white;" class="d-flex flex-grow-1">
-        testasdfasdfsadfsad
+        portfolio
     </div>
 </template>
 <script>
