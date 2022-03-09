@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 17,
+            "activePatchIndex": 33,
             "patches": [
                 {
                     "date": 1646750473080,
@@ -76,6 +76,70 @@
                 {
                     "date": 1646788453211,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import slideBar from \"@/components/slide-bar/slide-bar\";\r\n+import cardIndex from \"@/components/common/card-index\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n"
+                },
+                {
+                    "date": 1646821939210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,30 +4,23 @@\n       <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n       <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n     </div>\r\n     <div class=\"d-flex\" style=\"flex: 1\">\r\n-      <card-index>Portfolio</card-index>\r\n+      <card-index  @click=\"toPage('portfolio')\">Portfolio</card-index>\r\n     </div>\r\n   </div>\r\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n-import slideBar from \"@/components/slide-bar/slide-bar\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const router = useRouter();\r\n-    /**\r\n-     * 路径跳转路由函数\r\n-     * @description 根据路径跳转对应路由\r\n-     * @param {string} path 路径\r\n-     */\r\n-    const toPage = (path) => router.push(path);\r\n+    \r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822036505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n \r\n+\r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n     cardIndex,\r\n"
+                },
+                {
+                    "date": 1646822042132,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,10 +11,10 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n+import CardIndex from \"\"\r\n \r\n-\r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n     cardIndex,\r\n"
+                },
+                {
+                    "date": 1646822047519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n-import CardIndex from \"\"\r\n+import CardIndex from \"@/lib\"\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n"
+                },
+                {
+                    "date": 1646822054555,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n-import CardIndex from \"@/lib\"\r\n+import {CardIndex} from \"@/lib/routerLib\"\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n"
+                },
+                {
+                    "date": 1646822062513,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n </template>\r\n <script>\r\n import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n-import {CardIndex} from \"@/lib/routerLib\"\r\n+import {routerPush} from \"@/lib/routerLib\"\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n"
+                },
+                {
+                    "date": 1646822089492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    \r\n+    cons\r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822129903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    cons\r\n+    const \r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822136705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const \r\n+    const jump=routerPush();\r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822143568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     cardIndex,\r\n   },\r\n   setup() {\r\n     const jump=routerPush();\r\n-    return { toPage };\r\n+    return { jump };\r\n   },\r\n };\r\n </script>\r\n <style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646822166146,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,8 @@\n     </div>\r\n   </div>\r\n </template>\r\n <script>\r\n-import { useRouter } from \"vue-router\";\r\n import cardIndex from \"@/components/common/card-index\";\r\n import {routerPush} from \"@/lib/routerLib\"\r\n \r\n export default {\r\n"
+                },
+                {
+                    "date": 1646822319696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,23 +4,23 @@\n       <card-index size=\"90\" @click=\"toPage('about')\">About me</card-index>\r\n       <card-index @click=\"toPage('resume')\">Resume</card-index>\r\n     </div>\r\n     <div class=\"d-flex\" style=\"flex: 1\">\r\n-      <card-index  @click=\"toPage('portfolio')\">Portfolio</card-index>\r\n+      <card-index @click=\"toPage('portfolio')\">Portfolio</card-index>\r\n     </div>\r\n   </div>\r\n </template>\r\n <script>\r\n import cardIndex from \"@/components/common/card-index\";\r\n-import {routerPush} from \"@/lib/routerLib\"\r\n+import { routerPush } from \"@/lib/routerLib\";\r\n \r\n export default {\r\n   // name: \"Default\",\r\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const jump=routerPush();\r\n+    const toPage = routerPush();\r\n     return { jump };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822347514,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,9 +19,9 @@\n     cardIndex,\r\n   },\r\n   setup() {\r\n     const toPage = routerPush();\r\n-    return { jump };\r\n+    return { toPage };\r\n   },\r\n };\r\n </script>\r\n <style lang=\"\"></style>\r\n"
+                },
+                {
+                    "date": 1646822355531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const toPage = routerPush();\r\n+    const toPage = routerPush(pa);\r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822427724,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const toPage = routerPush(pa);\r\n+    const {toPage} = routerPush(path);\r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
+                },
+                {
+                    "date": 1646822433657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n   components: {\r\n     cardIndex,\r\n   },\r\n   setup() {\r\n-    const {toPage} = routerPush(path);\r\n+    const { toPage } = routerPush();\r\n     return { toPage };\r\n   },\r\n };\r\n </script>\r\n"
                 }
             ],
             "date": 1646750473080,

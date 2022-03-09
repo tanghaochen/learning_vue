@@ -39,8 +39,7 @@
 
 <script>
 import slideBar from "@/components/slide-bar/slide-bar";
-import { useRouter } from "vue-router";
-import { watch, ref, computed } from "vue";
+import { computedRouter } from "@/lib/routerLib.js";
 
 export default {
   name: "Home",
@@ -48,65 +47,9 @@ export default {
     slideBar,
   },
   setup() {
-    // const router = useRouter();
-    // const title = ref("I'M");
-    // const des = ref("");
-    //---------------------------三种方式监听router的改变-----------------------------------------
+    const { des, title } = computedRouter();
 
-    // 第一种 watch
-    // watch(
-    //   router.currentRoute,
-    //   ({ path, name }) => {
-    //     const condition = path === "/" ? "I'M" : "";
-    //     title.value = condition;
-
-    //     const condition2 = path === "/" ? "Mark" : name;
-    //     des.value = condition2;
-    //     console.log(path, name);
-    //   },
-    //   {
-    //     //第三个参数，一开始就监听
-    //     immediate: true,
-    //   }
-    // );
-    // 第二种 比watch更高级，监听响应渲染
-    // watchEffect(() => {
-    //   const { path, name } = router.currentRoute.value;
-    //   const condition = path === "/" ? "I'M" : "";
-    //   title.value = condition;
-
-    //   const condition2 = path === "/" ? "Mark" : name;
-    //   des.value = condition2;
-    // });
-    // 第三种 实时计算 更加简洁 但是现在却不能打印
-    /**
-     * 路径链接标识对象生成函数
-     * @description 生成一个标识对象
-     * @return {Object}
-     *  @property {string} title 标题
-     *  @property {string} des 描述
-     */
-    const router = useRouter();
-
-    /**
-     * 标题
-     */
-    const title = computed(() => {
-      const { path } = router.currentRoute.value;
-      console.log(title);
-      return path === "/" ? "I'M" : "";
-    });
-
-    /**
-     * 描述
-     */
-    const des = computed(() => {
-      const { path, name } = router.currentRoute.value;
-      console.log(path, name);
-      return path === "/" ? "Mark" : name;
-    });
-
-    return { title, des };
+    return { des, title };
   },
 };
 </script>
