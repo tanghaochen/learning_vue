@@ -19,5 +19,5 @@ npm run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### How to use?
-You can used css and transition of asset fold.
-you can used route of packaging for develop quicker.
+1. You can used css and transition of asset fold.
+2. you can used route of packaging for develop quicker.
