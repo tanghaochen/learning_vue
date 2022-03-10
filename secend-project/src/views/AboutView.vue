@@ -5,11 +5,9 @@
   </div>
 </template>
 <script>
-import myButton from "@/components/my-button.vue";
 
 export default {
   components: {
-    myButton,
   },
 };
 </script>
