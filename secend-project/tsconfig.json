@@ -26,7 +26,6 @@
       "esnext",
       "dom",
       "dom.iterable",
-      "scripthost"
     ]
   },
   "include": [

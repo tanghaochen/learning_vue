@@ -1,6 +1,6 @@
 <template lang="">
   <div>
-    <button type="" class="button">globel button</button>
+    <button type="" class="btn bg-info "><slot></slot></button>
   </div>
 </template>
 <script lang="ts">
