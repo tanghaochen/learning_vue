@@ -10,13 +10,13 @@
         </tr>
       </thead>
       <tbody>
-        <tr v-for="item of tableBody" :key="item.id">
+        <tr v-for="(item,index0) of tableBody" :key="item.id">
           <td v-for="(mItem, index) of item.info" :key="index">
             <template v-if="!mItem.fn">
               {{ mItem }}
             </template>
             <template v-else>
-              <my-button @click="mItem.fn(item)"> Test </my-button>
+              <my-button @click="mItem.fn(tableBody,index0)"> Test </my-button>
             </template>
           </td>
         </tr>

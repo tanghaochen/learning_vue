@@ -1,7 +1,8 @@
 import { tableBodyType } from "@/lib/interface/type";
+import { reactive } from "vue";
 import { DeleteButton, EditorButton } from "./layoutConfig";
 
-const userInfos: tableBodyType = [
+const userInfos: tableBodyType = reactive([
   {
     id: 0,
     info: ["张三", "男", 18],
@@ -14,11 +15,10 @@ const userInfos: tableBodyType = [
     id: 2,
     info: ["王五", "男", 50],
   },
-];
+]);
 
 userInfos.forEach((item) => {
   item.info.push(DeleteButton, EditorButton);
-  console.log("userInfos", userInfos);
 });
 
 export { userInfos };
