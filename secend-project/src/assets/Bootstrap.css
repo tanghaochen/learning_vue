@@ -2902,7 +2902,7 @@ textarea.form-control-lg {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .input-group > .form-control,

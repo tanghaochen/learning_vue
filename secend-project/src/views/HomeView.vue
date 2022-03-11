@@ -6,7 +6,11 @@
       class="m-5 shadow-sm p-3 mb-5 bg-body rounded d-flex flex-grow-1 border"
     >
       <!-- <router-view></router-view> -->
-      <c-table :tableBody="userInfos" :tableHeader="tableHeader"></c-table>
+      <c-table
+        :tableBody="userInfos"
+        :tableHeader="tableHeader"
+        @searchValue="HomeSearchValue"
+      ></c-table>
     </div>
   </div>
 </template>
@@ -19,8 +23,7 @@ import {
   tableHeaderType,
   tableBodyType,
 } from "@/lib/interface/type";
-import { tableButton } from "@/lib/interface/index";
-import {userInfos} from "@/lib/interface/tableData"
+import { userInfos } from "@/lib/interface/tableData";
 import CTable from "../components/c-table.vue";
 
 // @Options({
@@ -48,9 +51,14 @@ export default {
     //table header--------------------------------------------------------------------
     const tableHeader = new Set(["姓名", "性别", "年龄", "删除", "编辑"]);
 
+    //table search--------------------------------------------------------------------
+    const HomeSearchValue = (value:string) => {
+      console.log(value);
+    };
+
     //table body--------------------------------------------------------------------
-    
-    return { PageLis, userInfos, tableHeader };
+
+    return { PageLis, userInfos, tableHeader, HomeSearchValue };
   },
 };
 // })
