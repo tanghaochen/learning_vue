@@ -36,7 +36,9 @@
               {{ mItem }}
             </template>
             <template v-else>
-              <my-button @click="mItem.fn(tableBody, index0)"> Test </my-button>
+              <my-button @click="mItem.fn(tableBody, item.id)">
+                Test
+              </my-button>
             </template>
           </td>
         </tr>
@@ -44,30 +46,28 @@
     </table>
   </div>
 </template>
-<script lang="ts">
-import { defineComponent, PropType, ref } from "vue";
+<script lang="ts" setup>
+import { PropType, ref, watch } from "vue";
 import { tableHeaderType, tableBodyType } from "@/lib/interface/type";
 
-export default defineComponent({
-  name: "table",
-  props: {
-    tableHeader: {
-      type: Set as PropType<tableHeaderType>,
-      default: () => new Set(),
-    },
-    tableBody: {
-      type: Array as PropType<tableBodyType>,
-      default: () => {},
-    },
+// defineComponent can give VUE better support in TS
+const props = defineProps({
+  tableHeader: {
+    type: Set as PropType<tableHeaderType>,
+    default: () => new Set(),
   },
-  setup(props, context) {
-    const inputValue = ref("");
-    const sendInputValue = () => {
-      context.emit("searchValue", inputValue.value);
-    };
-
-    return { inputValue,sendInputValue };
+  tableBody: {
+    type: Array as PropType<tableBodyType>,
+    default: () => {},
   },
 });
+const inputValue = ref("");
+
+const emits = defineEmits(["searchValue"]);
+const watchInput = watch(inputValue, () => {
+  sendInputValue();
+});
+const sendInputValue = () => {
+  emits("searchValue", inputValue.value);
+};
 </script>
-<style lang=""></style>

@@ -5,15 +5,15 @@ import { DeleteButton, EditorButton } from "./layoutConfig";
 const userInfos: tableBodyType = reactive([
   {
     id: 0,
-    info: ["张三", "男", 18],
+    info: ["张三1", "男", 18],
   },
   {
     id: 1,
-    info: ["李四", "女", 30],
+    info: ["李四2", "女", 30],
   },
   {
     id: 2,
-    info: ["王五", "男", 50],
+    info: ["王五3", "男", 50],
   },
 ]);
 
