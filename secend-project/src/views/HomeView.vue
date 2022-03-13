@@ -3,13 +3,14 @@
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" /> -->
     <MyHeader :pageList="PageLis">用户管理</MyHeader>
     <div
-      class="m-5 shadow-sm p-3 mb-5 bg-body rounded d-flex flex-grow-1 border"
+      class="overflow-auto m-5 shadow-sm p-3 mb-5 bg-body rounded d-flex flex-grow-1 border"
     >
       <!-- <router-view></router-view> -->
       <CTable
         :tableBody="tableDate"
         :tableHeader="tableHeader"
         @searchValue="HomeSearchValue"
+        @AddUserInfo="AddUserInfo"
       ></CTable>
     </div>
   </div>
@@ -19,9 +20,14 @@
 import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import MyHeader from "@/components/MyHeader.vue";
 import { pageListStyle } from "@/lib/interface/type";
-import { userInfos } from "@/lib/interface/tableData";
-import CTable from "@/components/c-table.vue";
+import { userInfos, userOperation } from "@/lib/interface/tableData";
+import CTable from "@/components/CTable.vue";
 import { ref, toRef, toRefs, watch } from "vue";
+import {
+  DeleteButton,
+  EditorButton,
+  AddUserInfo,
+} from "/src/lib/interface/layoutConfig";
 
 // header button
 const PageLis: pageListStyle = [

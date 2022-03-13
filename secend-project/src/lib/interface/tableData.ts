@@ -17,8 +17,7 @@ const userInfos: tableBodyType = reactive([
   },
 ]);
 
-userInfos.forEach((item) => {
+const userOperation = userInfos.forEach((item) => {
   item.info.push(DeleteButton, EditorButton);
 });
-
-export { userInfos };
+export { userInfos, userOperation };

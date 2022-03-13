@@ -1,6 +1,6 @@
 <template>
   <div class="d-flex flex-column flex-fill">
-    <div class="d-flex aj-center">
+    <div class="d-flex aj-center ">
       <h4 class="aj-center">用户管理</h4>
       <div class="input-group" style="margin-left: 2rem; margin-bottom: 0.5rem">
         <input
@@ -21,7 +21,11 @@
         </button>
       </div>
     </div>
-    <table class="table flex-grow-1">
+
+    <my-button @click="AddUserInfo">添加用户</my-button>
+
+    <div class="overflow-auto">
+      <table class="table flex-grow-1">
       <thead>
         <tr>
           <th v-for="head of tableHeader" :key="head" scope="col">
@@ -44,11 +48,13 @@
         </tr>
       </tbody>
     </table>
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
 import { PropType, ref, watch } from "vue";
 import { tableHeaderType, tableBodyType } from "@/lib/interface/type";
+import myButton from '@/components/my-button.vue';
 
 // defineComponent can give VUE better support in TS
 const props = defineProps({
@@ -63,11 +69,16 @@ const props = defineProps({
 });
 const inputValue = ref("");
 
-const emits = defineEmits(["searchValue"]);
+const emits = defineEmits(["searchValue","AddUserInfo"]);
 const watchInput = watch(inputValue, () => {
   sendInputValue();
 });
 const sendInputValue = () => {
   emits("searchValue", inputValue.value);
 };
+
+const AddUserInfo=()=>{
+  emits("AddUserInfo");
+}
+
 </script>

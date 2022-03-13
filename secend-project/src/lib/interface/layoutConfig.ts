@@ -1,5 +1,6 @@
 import { tableButton, tableBodyIndex } from "@/lib/interface/index";
 import { userInfos } from "./tableData";
+import router from "@/router";
 
 export const DeleteButton: tableButton = {
   fn: (uInfo: [], index: number) => {
@@ -17,7 +18,29 @@ export const DeleteButton: tableButton = {
 
 export const EditorButton: tableButton = {
   fn: (uInfo: [], index: number) => {
-    console.log(uInfo);
+    router.push({
+      name: "about",
+      query: { id: index },
+    });
   },
   styles: { backgroundColor: "black" },
+};
+
+export const AddUserInfo = () => {
+  const UserItem = {
+    name: "1",
+    gender: "女",
+    age: 11,
+  };
+  const { length: newId } = userInfos;
+  userInfos.push({
+    id: newId,
+    info: [
+      UserItem.name,
+      UserItem.gender,
+      UserItem.age,
+      DeleteButton,
+      EditorButton,
+    ],
+  });
 };
