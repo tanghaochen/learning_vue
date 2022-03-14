@@ -32,9 +32,13 @@
         <label class="visually-hidden" for="specificSizeSelect"
           >Preference</label
         >
-        <select class="form-select" id="specificSizeSelect">
-          <option selected value="1">{{ TablePutForm.gender }}</option>
-          <option value="3">女</option>
+        <select
+          class="form-select"
+          id="specificSizeSelect"
+          v-model="TablePutForm.gender"
+        >
+          <option selected value="女">女</option>
+          <option value="男">男</option>
         </select>
       </div>
     </form>
@@ -49,34 +53,30 @@ import { userInfos } from "@/lib/interface/tableData";
 import { useRoute } from "vue-router";
 import { tableBodyIndex } from "@/lib/interface";
 import route from "@/router";
+import { onMounted } from "vue";
 
-const TablePutForm = ref({
-  name: "",
-  age: null,
-  gender: "男",
-});
+const TablePutForm = reactive(
+  ref({
+    name: "" as string,
+    age: 0 as number,
+    gender: "男" as string,
+  })
+);
 const router = useRoute();
 const UserInfoIndex = Number(router.query.id);
+TablePutForm.value.name = String(router.query.name);
+TablePutForm.value.age = Number(router.query.age);
+TablePutForm.value.gender = String(router.query.gender);
 
 const SubmitPut = () => {
-  const findID = (item: tableBodyIndex) => {
-    item.id === UserInfoIndex;
-  };
+  let { name, age, gender } = TablePutForm.value;
+  TablePutForm.value.name = userInfos[UserInfoIndex].info[0] as string;
+  TablePutForm.value.gender = userInfos[UserInfoIndex].info[1] as string;
+  TablePutForm.value.age = userInfos[UserInfoIndex].info[2] as number;
 
-  // const findResult = [userInfos[UserInfoIndex]].find(findID);
-  TablePutForm.name = userInfos[UserInfoIndex].info[0] as string;
-  userInfos[UserInfoIndex].info[0] = TablePutForm.value.name;
-  console.log("userInfos[UserInfoIndex].info", userInfos[UserInfoIndex].info);
+  userInfos[UserInfoIndex].info[0] = name;
+  userInfos[UserInfoIndex].info[1] = gender;
+  userInfos[UserInfoIndex].info[2] = age;
   route.push({ name: "home" });
-  console.log(
-    "[userInfos[UserInfoIndex]].id",
-    userInfos[UserInfoIndex].info[0],
-    TablePutForm.value.name
-  );
-  // UserItem.name,
-  // UserItem.gender,
-  // UserItem.age,
-  // DeleteButton,
-  // EditorButton,
 };
 </script>

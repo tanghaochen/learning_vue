@@ -17,10 +17,11 @@ export const DeleteButton: tableButton = {
 };
 
 export const EditorButton: tableButton = {
-  fn: (uInfo: [], index: number) => {
+  fn: (uInfo: any[], index: number) => {
+    const item = uInfo[index].info;
     router.push({
       name: "about",
-      query: { id: index },
+      query: { id: index, name: item[0], gender: item[1], age: item[2] },
     });
   },
   styles: { backgroundColor: "black" },
