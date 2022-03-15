@@ -85,12 +85,12 @@ const isScroll = useWindowScrollStatus();
   top: 0;
   z-index: 99;
   padding: 10px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out;
 }
 
 .b-header:hover,
 .b-header[isScroll="true"] {
-  transition: all 0.3s ease-in-out;
+  transition: all 0.9s ease-in-out;
   background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
 }

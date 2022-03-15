@@ -4,7 +4,6 @@ const { resolve } = require("path");
 
 module.exports = defineConfig({
   transpileDependencies: true,
-  // 关闭组件命名不规范报错
   lintOnSave: false,
   publicPath: "./",
   configureWebpack: {
@@ -16,14 +15,12 @@ module.exports = defineConfig({
     resolve: {
       alias: {
         "@c": resolve(__dirname, "src/components"),
-        "@a": resolve(__dirname, "src/assets"),
         "@b": resolve(__dirname, "src/blocks"),
-        "@u": resolve(__dirname, "src/use"),
         "@r": resolve(__dirname, "src/router"),
         "@v": resolve(__dirname, "src/views"),
         "@p": resolve(__dirname, "src/plugins"),
-        "@vp": resolve(__dirname, "src/view-provider"),
       },
+      extensions: [".vue"],
     },
   },
 });
