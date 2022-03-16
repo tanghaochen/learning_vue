@@ -25,8 +25,8 @@
     </a-page-header>
     <router-view v-slot="{ Component }" style="margin: 1rem">
       <transition
-        enter-active-class="animate__animated animate__backInDown animate__faster"
-        leave-to-class="animate__animated animate__bounceOut my-element animate__fast"
+        enter-active-class="animate__animated animate__backInDown animate__fast"
+        leave-to-class="animate__animated animate__bounceOut my-element animate__faster"
       >
         <component :is="Component" />
       </transition>

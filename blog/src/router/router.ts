@@ -22,15 +22,15 @@ export const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: "",
-        redirect: "/show/blog",
+        redirect: "/show/blog/1",
       },
       {
-        path: "blog",
+        path: "blog/:pageNum",
         name: "blog",
         component: Blog,
       },
       {
-        path: "book",
+        path: "book/:pageNum",
         name: "book",
         component: Book,
       },

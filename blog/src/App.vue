@@ -6,6 +6,7 @@
     <router-link to="/about">About</router-link>
   </nav> -->
     <router-view />
+    <a-back-top />
   </div>
 </template>
 <script lang="ts" setup>
