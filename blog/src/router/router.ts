@@ -1,11 +1,11 @@
 import { RouteRecordRaw } from "vue-router";
 import showIndex from "@/views/show/showIndex.vue";
-import showHome from "@/views/show/showHome.vue";
-import Blog from "@/views/show/Blog.vue";
-import Book from "@/views/show/Book.vue";
-import project from "@/views/show/project.vue";
-import file from "@/views/show/file.vue";
-import list from "@/views/show/list.vue";
+// import showHome from "@/views/show/showHome.vue";
+import Blog from "@/views/show/SBlog.vue";
+import Book from "@/views/show/SBook.vue";
+import project from "@/views/show/SProject.vue";
+import file from "@/views/show/SFile.vue";
+import list from "@/views/show/SList.vue";
 
 export const routes: Array<RouteRecordRaw> = [
   {
@@ -22,17 +22,16 @@ export const routes: Array<RouteRecordRaw> = [
     children: [
       {
         path: "",
-        name: "showHome",
-        component: showHome,
+        redirect: "/show/blog",
       },
       {
-        path: "Blog",
-        name: "Blog",
+        path: "blog",
+        name: "blog",
         component: Blog,
       },
       {
-        path: "Book",
-        name: "Book",
+        path: "book",
+        name: "book",
         component: Book,
       },
       {

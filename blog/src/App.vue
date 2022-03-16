@@ -12,6 +12,7 @@
 import pageHeader from "@/blocks/pageHeaders.vue";
 </script>
 <style lang="scss" scoped>
+@import url("animate.css");
 #myApp {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -19,5 +20,7 @@ import pageHeader from "@/blocks/pageHeaders.vue";
   text-align: center;
   color: #2c3e50;
   background: #eaeef0;
+  height: 100%;
+  min-height: 100vh;
 }
 </style>

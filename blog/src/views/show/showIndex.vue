@@ -23,28 +23,33 @@
         </div>
       </template>
     </a-page-header>
+    <router-view v-slot="{ Component }" style="margin: 1rem">
+      <transition
+        enter-active-class="animate__animated animate__backInDown animate__faster"
+        leave-to-class="animate__animated animate__bounceOut my-element animate__fast"
+      >
+        <component :is="Component" />
+      </transition>
+    </router-view>
   </div>
-  <router-view></router-view>
 </template>
 <script lang="ts" setup>
 import router from "@/router";
 import { HomeOutlined } from "@ant-design/icons-vue";
 
-const JumpChildPage = (name: string) => {
-  console.log("ads");
-  router.push(name);
-};
+const JumpChildPage = (routeName: string) =>
+  router.push.bind(router, { name: routeName });
 // icon 试过v-html等各种方式,都失败了
 const buttonGroup = [
   {
     text: "日志",
     icon: `<BookOutlined />`,
-    handle: JumpChildPage("Blog"),
+    handle: JumpChildPage("blog"),
   },
   {
     text: "读书",
     icon: `<ReadOutlined />`,
-    handle: JumpChildPage("Book"),
+    handle: JumpChildPage("book"),
   },
   {
     text: "项目",
@@ -65,8 +70,22 @@ const buttonGroup = [
 </script>
 
 <style lang="scss" scoped>
+.my-element {
+  --animate-duration: 0.3s;
+}
+
+:root {
+  --animate-delay: 0.5s;
+}
 .show {
   margin: 4rem auto;
-  width: 70vw;
+  width: 50vw;
+}
+/*
+* 全局样式表
+*/
+#app {
+  min-height: 110vh;
+  background-color: #eceff1;
 }
 </style>

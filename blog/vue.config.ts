@@ -20,7 +20,6 @@ module.exports = defineConfig({
         "@v": resolve(__dirname, "src/views"),
         "@p": resolve(__dirname, "src/plugins"),
       },
-      extensions: [".vue"],
     },
   },
 });
